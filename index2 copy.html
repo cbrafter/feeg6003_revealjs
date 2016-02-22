@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>ACM2 - Reveal.js</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="C Rafter">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="./reveal.js/css/theme/sky.css" id="theme">
+        <link rel="stylesheet" href="uos-reveal.min.css">
+		
+        <!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--Set Alignment-->
+        <style>
+            /*Content Alignment*/
+            .reveal .slides {
+                text-align: left;
+            }
+            /*Title Alignment*/
+            .reveal .slides h1{
+                text-align: center;
+            }
+        </style>
+
+		<!--[if lt IE 9]>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+            <!--Insert uni logo in top corner-->
+            <img id="unilogo" src="img/uos-logo.png" class="imageposition-unilogo desktop-image"/>
+            <!--Solid banner across top-->
+            <!--<div class="input-color">
+                <input type="text" value="sotonNavy" />
+                <div class="color-box" style="background-color: #005C85; desktop-image;"></div>
+            </div>-->
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section style="text-align: center;">
+					<h1>Reveal.js</h1>
+					<h3>Presrenting The HTML Presentation Framework</h3>
+					<p>
+						<small>A Workshop by Craig and Kostas</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Hello There</h2>
+					<p>
+						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+					</p>
+				</section>
+
+				<section data-markdown>
+				    <script type="text/template">
+				        # Page title
+
+				        A paragraph with some text and a [link](http://hakim.se).
+				        - apoint
+				        - apoint
+
+				        To *push* use: ```git push```
+
+				        To quote A. Lincoln
+				        > pardon my french
+
+				    </script>
+				</section>
+
+				<section data-markdown>
+                    <!-- .slide: style="text-align: left;"> -->
+				    <script type="text/template">
+				        # Some left aligned Markdown
+                        
+				        A paragraph with some text and a [link](http://hakim.se).
+				        - a point
+				        - a point
+
+				        To *push* use: ```git push```
+
+				        To quote A. Lincoln
+				        > pardon my french
+
+				    </script>
+				</section>
+
+				<section style="text-align: left;">
+				    <h1 style="text-align: center;">Some Left Aligned HTML, and logo gone</h1>
+                    <p>A shopping list:</p>
+                    <ol>
+                      <li>Coffee</li>
+                      <li>Tea</li>
+                      <li>Milk</li>
+                    </ol>
+				</section>
+                
+                <section>
+                    <h1>Two columns anyone???</h1>
+                    <div class='left' style='float:left;width: left.width;'>
+                        <h6>Numbered lists</h6>
+                        <ol>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                        </ol>
+                    </div>
+                    <div class='right' style='float: right; width: right.width;'>
+                        <h6>Bullet lists</h6>
+                        <ul>
+                            <li>First Thing</li>
+                            <li>Second Thing</li>
+                            <li>Third Thing</li>
+                        </ul>
+                    </div>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="./reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: './reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+            
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                if (event.indexh == 4) {
+                    document.getElementById("unilogo").style = "visibility: hidden;";
+                }
+                else{
+                    document.getElementById("unilogo").style = "visibility: visible;";
+                }
+            } );
+
+		</script>
+
+	</body>
+</html>
