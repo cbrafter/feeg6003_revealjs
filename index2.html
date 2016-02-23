@@ -67,7 +67,14 @@
 						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
 					</p>
 				</section>
-
+                
+                <section data-markdown>
+                    ## Workshop outline
+                    
+                    1. Reveal.js capabilities
+                    2. Making a reveal.js presentation
+                    3. Making your own presentation
+                </section>
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
@@ -292,18 +299,28 @@
 						<h2>Tiled Backgrounds</h2>
 						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
 					</section>
-					<section data-background-iframe="https://www.youtube.com/embed/ZXsQAXx_ao0?autoplay=1" autoplay=1 data-background-color="#000000">
+					<section data-background-iframe="https://www.youtube.com/embed/ZXsQAXx_ao0" data-background-color="#000000">
 						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; opacity: 0.9;">
                             <h3><font color="#FFFFFF">Video Background</font></h3>
 							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-iframe="https://www.youtube.com/embed/ZXsQAXx_ao0" data-autoplay data-background-color="#000000"&gt;</code></pre>
 						</div>
 					</section>
                     <section>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZXsQAXx_ao0?autoplay=1" data-autoplay frameborder="0" allowfullscreen></iframe>
+                        <h2>Embedded Video</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZXsQAXx_ao0" frameborder="0" allowfullscreen></iframe>
+                        <div data-markdown>
+                            <script type="text/template">
+                            ```
+                            <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/ZXsQAXx_ao0?autoplay=1" 
+                            frameborder="0" allowfullscreen></iframe>
+                            ```
+                            </script>
+                        </div>
                     </section>
 					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
                     <!--<section data-background="https://media.giphy.com/media/wErJXg1tIgHXG/giphy.gif">-->
-                        <div  style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; opacity: 0.8;">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; opacity: 0.8;">
                             <h3><font color="#FFFFFF">... and GIFs</font></h3>
                             <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="http://i.giphy.com/90F8aUepslB84.gif"&gt;</code></pre>
                         </div>
@@ -405,36 +422,15 @@ pyplot.ylabel('$x^2$')
                         </script>
                     </div>
                 </section>
-    
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
+                
+                <section data-markdown>
+                    ## Tablular Tables
+                    |Item     |Value |Qty. |
+                    |:--------|:----:|:---:|
+                    |Apples   |$1.00 |7    |
+                    |Lemonade |$2.00 |18   |
+                    |Bread    |$3.00 |2    |
+                </section>
                 
 				<section>
 					<h2>Clever Quotes</h2>
@@ -549,7 +545,6 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
-					{ src: './reveal.js/lib/js/classList.js' },
 					{ src: './reveal.js/plugin/math/math.js', async: true },
 					{ src: './reveal.js/plugin/notes/notes.js', async: true }
 				]
