@@ -1,4 +1,5 @@
 # FEEG6003: Reveal.js Workshop
+*By Craig & Kostas*
 
 ## Introduction
 
