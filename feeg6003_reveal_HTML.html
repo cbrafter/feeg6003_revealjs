@@ -19,6 +19,9 @@
 		
         <!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+        
+        <!--Plotly Plotting-->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -226,6 +229,13 @@
                     </section>
                 </section>
 
+                <section>
+                    <h2>Powerful Plotting</h2>
+                    <p>Embed plotly.js or chart.js plots right into your slides!</p>
+                    <div id="myDiv" style="margin: 0 auto; width: 480px; height: 400px;" centered><!-- Plotly chart will be drawn inside this DIV --></div>
+                    <script src="plotfile.js"></script>
+                </section>
+                
 				<section>
 					<section id="fragments">
 						<h2>Fragments</h2>
@@ -361,27 +371,8 @@ pyplot.ylabel('$x^2$')
 					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
                 <section>
-                    <h2>Two columns, no probelms...</h2>
+                    <h2>Two columns, no problems...</h2>
                     <div class='left' style='float:left;width: left.width;'>
                         <h6>Numbered lists</h6>
                         <ol>
@@ -425,7 +416,7 @@ pyplot.ylabel('$x^2$')
 					<h2>Intergalactic Interconnections</h2>
 					<p>
 						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
+						<a href="#/13/5">like this</a>.
 					</p>
 				</section>
 
@@ -439,11 +430,11 @@ pyplot.ylabel('$x^2$')
 					</aside>
 				</section>
 
-				<section>
+				<!--<section>
 					<h2>Export to PDF</h2>
 					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
 					<iframe src="https://www.slideshare.net/slideshow/embed_code/key/wJKsHYIEG2CqUj" width="500" height="410" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+				</section>-->
 
 				<section>
                     <section>
@@ -458,7 +449,7 @@ pyplot.ylabel('$x^2$')
 
                         <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 Reveal.addEventListener( 'slidechanged', function(event) {
-    if (event.indexh == 25 &amp;&amp; event.indexv == 1) {
+    if (event.indexh == 23 &amp;&amp; event.indexv == 1) {
         document.getElementById("unilogo").style = "visibility: hidden;";
     }
     else {
@@ -476,7 +467,7 @@ Reveal.addEventListener( 'slidechanged', function(event) {
 					</p>
 				</section>
 
-				<section style="text-align: left;">
+				<section>
 					<h1>THE END</h1>
 					<p>
 						- <a href="http://slides.com">Try the online editor</a> <br>
@@ -493,32 +484,45 @@ Reveal.addEventListener( 'slidechanged', function(event) {
 
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
+            // Must initialise reveal for presentation
+            Reveal.initialize({
+                // Display controls in the bottom right corner
 				controls: true,
+                // Display a presentation progress bar
 				progress: true,
+                // Push each slide change to the browser history
 				history: true,
+                // Vertical centering of slides
 				center: true,
-
-				transition: 'convex', // none/fade/slide/convex/concave/zoom
-
+                // none/fade/slide/convex/concave/zoom
+				transition: 'convex',
+                
+                // LaTeX Support with MathJax
                 math: {
 					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
 					config: 'TeX-AMS_HTML-full'
 				},
+                
 				// Optional reveal.js plugins
 				dependencies: [
+                    // Cross-browser support
 					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    // Markdown Support
 					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // Code Syntax Highlighting
 					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    // Slide Zooming
 					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    // LateX Support
 					{ src: './reveal.js/plugin/math/math.js', async: true },
+                    // Speaker Notes
 					{ src: './reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
             
             Reveal.addEventListener('slidechanged', function( event ) {
-                if (event.indexh == 25 && event.indexv == 1) {
+                if (event.indexh == 23 && event.indexv == 1) {
                     document.getElementById("unilogo").style = "visibility: hidden;";
                 }
                 else {

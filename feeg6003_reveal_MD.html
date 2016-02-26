@@ -6,7 +6,7 @@
 		<title>ACM2 - Reveal.js</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="C Rafter, K Dra">
+		<meta name="author" content="C. Rafter, K. Drakopoulos">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -28,6 +28,9 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+        
+        <!--Plotly Plotting-->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         
         <!--Set Alignment-->
         <style>
@@ -54,12 +57,14 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
                 <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
-                <section data-markdown data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
                     <script type="text/template">
                         # Reveal.js
                         ### The HTML Presentation Framework
 
-                        A workshop by Craig and Kostas.
+                        A workshop by
+                        
+                        Craig Rafter and Konstantinos Drakopoulos.
 
                         ---
 
@@ -222,55 +227,57 @@
                         
                         $P(E) = {n \choose k} p^k (1-p)^{ n-k}$
                         ```
+                    
+                        </script>
+                </section>
+				
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+                        ## Fragments
 
-                        ---
-                        
-						## Fragments
-                        
-						Hit the next arrow...
-                        
-						... to step through ... <!--.element class="fragment"-->
-                        
-						... a fragmented slide. <!--.element class="fragment"-->
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-                        
+                        Hit the next arrow...
+
+                        ... to step through ... <!--.element class="fragment"-->
+
+                        ... a fragmented slide. <!--.element class="fragment"-->
+                        <aside class="notes">
+                            This slide has fragments which are also stepped through in the notes window.
+                        </aside>
+
                         --
                         
-						## Fragment Styles</h2>
-                        
-						There's different types of fragments, like:
-                        
-						grow <!--.element class="fragment grow"-->
-                        
-						shrink <!--.element class="fragment shrink"-->
-                        
-						fade-out <!--.element class="fragment fade-out"-->
-                        
-						current-visible <!--.element class="fragment current-visible"-->
-                        
-						highlight-red <!--.element class="fragment highlight-red"-->
-                        
-						highlight-blue <!--.element class="fragment highlight-blue"-->
-                        
+                        ## Fragment Styles</h2>
+
+                        There's different types of fragments, like:
+
+                        grow <!--.element class="fragment grow"-->
+
+                        shrink <!--.element class="fragment shrink"-->
+
+                        fade-out <!--.element class="fragment fade-out"-->
+
+                        current-visible <!--.element class="fragment current-visible"-->
+
+                        highlight-red <!--.element class="fragment highlight-red"-->
+
+                        highlight-blue <!--.element class="fragment highlight-blue"-->
+
                         ---
-                        
+
                         <!--.slide: id="#transition"-->
                         ## Transition Styles
-                        
+
                         You can select from different transitions, like:
-                        
+
                         [None](?transition=none#/transition) -
                         [Fade](?transition=fade#/transition) -
                         [Slide](?transition=slide#/transition) -
                         [Convex](?transition=convex#/transition) -
                         [Concave](?transition=concave#/transition) -
                         [Zoom](?transition=zoom#/transition)
-
                     </script>
                 </section>
-                
+
 				<section>
 					<h2>Themes</h2>
 					<p>
@@ -385,29 +392,13 @@
                         ``` 
                         
                         Code syntax highlighting coutesy of [highlight.js](http://softwaremaniacs.org/soft/highlight/en/description/)
-                        
-                        ---
-                        
-                        ## Marvelous Lists
-                        
-                        - No order here
-                        - Or here
-                        - Or here
-                        - Or here
-                        
-                        ---
-                        
-                        ## Fantastic Ordered List
-                        
-                        1. One is smaller than...
-                        2. Two is smaller than...
-                        3. Three!                  
+
                     </script>
 				</section>
 
                 <section>
-                    <h2>Two columns, no probelms...</h2>
-                    <div class='left' style='float:left;width: left.width;' data-markdown>
+                    <h2>Two columns, no problems...</h2>
+                    <div class='left' style='float:left; width: left.width;' data-markdown>
                         <script type="text/template">
                             ###### Numbered lists
                             1. Milk
@@ -426,7 +417,7 @@
                     </div>
                 </section>
                 
-				<section data-markdown data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
                     <script type="text/template">
                         ## Tablular Tables
                         |Item     |Value |Qty. |
@@ -448,7 +439,7 @@
                         
                         ## Intergalactic Interconnections
                         
-                        You can link between slide internally [like this](#/2/3).
+                        You can link between slide internally [like this](#/13/5).
                         
                         ---
                         
@@ -462,12 +453,12 @@
                             Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
                         </aside>
                         
-                        ---
+                        <!-- ---
                         
                         ## Export to PDF
                         
                         Presentations can be [exported to PDF](https://github.com/hakimel/reveal.js#pdf-export) here's an example from [Slideshare](https://www.slideshare.net/):
-                        <iframe src="https://www.slideshare.net/slideshow/embed_code/key/wJKsHYIEG2CqUj" width="500" height="410" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                        <iframe src="https://www.slideshare.net/slideshow/embed_code/key/wJKsHYIEG2CqUj" width="500" height="410" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>-->
                         
                         ---
                         
@@ -483,7 +474,7 @@
                         
                         ```
                         Reveal.addEventListener( 'slidechanged', function(event) {
-                            if (event.indexh == 25 && event.indexv == 1) {
+                            if (event.indexh == 23 && event.indexv == 1) {
                                 document.getElementById("unilogo").style = "visibility: hidden;";
                             }
                             else {
@@ -516,14 +507,20 @@
 
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
+            // Must initialise reveal for presentation
+            Reveal.initialize({
+                // Display controls in the bottom right corner
 				controls: true,
+                // Display a presentation progress bar
 				progress: true,
+                // Push each slide change to the browser history
 				history: true,
+                // Vertical centering of slides
 				center: true,
-
-				transition: 'convex', // none/fade/slide/convex/concave/zoom
-
+                // none/fade/slide/convex/concave/zoom
+				transition: 'convex',
+                
+                // LaTeX Support with MathJax
                 math: {
 					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
 					config: 'TeX-AMS_HTML-full'
@@ -531,12 +528,18 @@
                 
 				// Optional reveal.js plugins
 				dependencies: [
+                    // Cross-browser support
 					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    // Markdown Support
 					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // Code Syntax Highlighting
 					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    // Slide Zooming
 					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    // LateX Support
 					{ src: './reveal.js/plugin/math/math.js', async: true },
+                    // Speaker Notes
 					{ src: './reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});

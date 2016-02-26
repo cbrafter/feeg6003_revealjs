@@ -141,7 +141,7 @@
                 parallaxBackgroundHorizontal: null,
                 parallaxBackgroundVertical: null,
 
-                // Math support
+                // LaTeX Support with MathJax
                 math: {
 					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
 					config: 'TeX-AMS_HTML-full'
@@ -149,12 +149,19 @@
                 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
-					{ src: '/reveal.js/plugin/notes/notes.js', async: true }
+                    // Cross-browser support
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    // Markdown Support
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // Code Syntax Highlighting
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    // Slide Zooming
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    // LateX Support
+					{ src: './reveal.js/plugin/math/math.js', async: true },
+                    // Speaker Notes
+					{ src: './reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
             
