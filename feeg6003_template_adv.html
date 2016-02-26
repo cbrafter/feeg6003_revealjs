@@ -12,31 +12,36 @@
         <!--Mobile compatibility-->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <!--Stylesheets-->
         <!--Reveal main-->
-		<link rel="stylesheet" href="/reveal.js/css/reveal.css"> 
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css"> 
         <!--Theme-->
-		<link rel="stylesheet" href="/reveal.js/css/theme/black.css" id="theme">
-
+		<link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme">
+        <!--YOUR CSS HERE-->
+        <!--<link rel="stylesheet" href="./path/to/file.css">-->
+        
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+        <!--Plotly Plotting-->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        
         <!--Internet Explorer Backward Compatibility-->
 		<!--[if lt IE 9]>
 		<script src="/reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
+        
 	</head>
 
     <!--Page Content-->
@@ -58,14 +63,19 @@
 						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
 					</p>
 				</section>
+                
+                <section>
+                    <div id="myDiv" style="margin: 0 auto; width: 480px; height: 400px;" centered><!-- Plotly chart will be drawn inside this DIV --></div>
+                        <script src="plotfile.js"></script>
+                </section>
 
 			</div>
 		</div>
 
         <!--Cross Platform Compatiblility-->
-		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/lib/js/head.min.js"></script>
         <!--Reveal Presentation Script-->
-		<script src="/reveal.js/js/reveal.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
 
 		<script>
 			// Full list of configuration options available at:

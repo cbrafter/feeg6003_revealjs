@@ -31,7 +31,39 @@
 
 		<script>
             // Must initialise reveal for presentation
-			Reveal.initialize();
+            Reveal.initialize({
+                // Display controls in the bottom right corner
+				controls: true,
+                // Display a presentation progress bar
+				progress: true,
+                // Push each slide change to the browser history
+				history: true,
+                // Vertical centering of slides
+				center: true,
+                // none/fade/slide/convex/concave/zoom
+				transition: 'convex',
+                // LaTeX Support with MathJax
+                math: {
+					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'
+				},
+                
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    // Markdown Support
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // Code Syntax Highlighting
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    // Slide Zooming
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    // LateX Support
+					{ src: './reveal.js/plugin/math/math.js', async: true },
+                    // Speaker Notes
+					{ src: './reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
 		</script>
 	</body>
 </html>
