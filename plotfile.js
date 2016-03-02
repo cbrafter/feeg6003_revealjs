@@ -16,5 +16,5 @@ var layout = {
     t: 90
   }
 };
-Plotly.newPlot('myDiv', data, layout);
+Plotly.newPlot('MtBrunoDiv', data, layout);
 

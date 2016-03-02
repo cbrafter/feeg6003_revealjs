@@ -81,6 +81,26 @@
                         3. Making your own presentation
 
                         ---
+                        
+                        ## Why Reveal.js?
+                        
+                        - Define files as text.
+                        - Version control your presention.
+                        - Beautiful consistent web formatting
+                        - Markdown and LaTeX out of the box
+                        
+                        --
+                        
+                        ## Alternatives
+                        
+                        - PowerPoint
+                        - Latex & Beamer
+                        - Slides.js
+                        - Deck.js
+                        - Prezi
+                        - Impress.js
+                        
+                        ---
 
                         [//]: # (Example of nested vertical slides)
 
@@ -151,9 +171,8 @@
                         
                         Code for last 3 slides:
                         
-                        ```
-                        <section data-markdown 
-                          data-separator="^\n---\n$" 
+                        ```html
+                        <section data-markdown data-separator="^\n---\n$" 
                           data-separator-vertical="^\n--\n$">
                             ## Demo 2
                             Slide 1.1
@@ -226,9 +245,17 @@
                         ##### Maths in markdown
                         
                         $P(E) = {n \choose k} p^k (1-p)^{ n-k}$
-                        ```
-                    
+                        ```                        
                         </script>
+                </section>
+                
+                <section>
+                    <h2>Powerful Plotting</h2>
+                    <p>Embed plotly.js or chart.js plots right into your slides!</p>
+                    <div id="MtBrunoDiv" style="margin: 0 auto; width: 480px; height: 400px;" centered>
+                        <!-- Plotly chart will be drawn inside this DIV -->
+                    </div>
+                    <script src="plotfile.js"></script>
                 </section>
 				
                 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
@@ -264,17 +291,17 @@
 
                         ---
 
-                        <!--.slide: id="#transition"-->
+                        <!--.slide: id="#transitionMod"-->
                         ## Transition Styles
 
                         You can select from different transitions, like:
 
-                        [None](?transition=none#/transition) -
-                        [Fade](?transition=fade#/transition) -
-                        [Slide](?transition=slide#/transition) -
-                        [Convex](?transition=convex#/transition) -
-                        [Concave](?transition=concave#/transition) -
-                        [Zoom](?transition=zoom#/transition)
+                        [None](?transition=none#/transitionMod) -
+                        [Fade](?transition=fade#/transitionMod) -
+                        [Slide](?transition=slide#/transitionMod) -
+                        [Convex](?transition=convex#/transitionMod) -
+                        [Concave](?transition=concave#/transitionMod) -
+                        [Zoom](?transition=zoom#/transitionMod)
                     </script>
                 </section>
 
@@ -392,7 +419,13 @@
                         ``` 
                         
                         Code syntax highlighting coutesy of [highlight.js](http://softwaremaniacs.org/soft/highlight/en/description/)
-
+                        
+                        ---
+                                                
+                        ## Intergalactic Interconnections
+                        
+                        You can link between slide internally [like this](#/15/5).
+                        
                     </script>
 				</section>
 
@@ -437,12 +470,6 @@
                         
                         ---
                         
-                        ## Intergalactic Interconnections
-                        
-                        You can link between slide internally [like this](#/13/5).
-                        
-                        ---
-                        
                         ## Speaker View
                         
                         There's a [speaker view](https://github.com/hakimel/reveal.js#speaker-notes). It includes a timer, preview of the upcoming slide as well as your speaker notes.
@@ -458,7 +485,9 @@
                         ## Export to PDF
                         
                         Presentations can be [exported to PDF](https://github.com/hakimel/reveal.js#pdf-export) here's an example from [Slideshare](https://www.slideshare.net/):
-                        <iframe src="https://www.slideshare.net/slideshow/embed_code/key/wJKsHYIEG2CqUj" width="500" height="410" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>-->
+                        <iframe src="https://www.slideshare.net/slideshow/embed_code/key/wJKsHYIEG2CqUj" width="500" height="410" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                        
+                        -->
                         
                         ---
                         
@@ -474,7 +503,7 @@
                         
                         ```
                         Reveal.addEventListener( 'slidechanged', function(event) {
-                            if (event.indexh == 23 && event.indexv == 1) {
+                            if (event.indexh == 24 && event.indexv == 1) {
                                 document.getElementById("unilogo").style = "visibility: hidden;";
                             }
                             else {
@@ -546,7 +575,7 @@
             
             // For triggering logo off on a particular slide
             Reveal.addEventListener( 'slidechanged', function( event ) {
-                if (event.indexh == 25 && event.indexv == 1) {
+                if (event.indexh == 24 && event.indexv == 1) {
                     document.getElementById("unilogo").style = "visibility: hidden;";
                 }
                 else{
