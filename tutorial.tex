@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper,final]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\title{Reveal.js Tutorial}
+\author{by Kostas and Craig}
+\maketitle
+
+In this tutorial we will create a presentation by constructing everything from scratch: HTML, CSS, Markdown and JavaScript.
+Before we start the tutorial it is useful to have a quickly go through the main elements of web-page building.
+
+\section{Crash-course}
+These \textit{cheat-sheets} have been built from resources available on \emph{CodeAcademy} and the \emph{Mozilla Developer Network} which are also recommended for more in-depth training and resources. An excellent online book is also available on \url{http://eloquentjavascript.net/}.
+
+We decided that the quickest way to approach this is to provide commented samples so we can quickly build a simple web-page.
+
+\subsection{HTML}
+HTML (\emph{HyperText Markup Language} is used by browsers to communicate with each other and display data in an attractive fashion. It has a tree-like structure similar to that of XML. Each branch defines a section of a web page is started by some text in brackets \texttt{<branch>} and ends with a \textbf{backward} slash and the text \verb|<\branch>|. Some objects are added in self-stopping branches by using a \textbf{forward} slash before closing the bracket \texttt{<branch/>}
+
+\begin{verbatim}
+	<!--Let the browser know this is an HTML doc-->
+<!doctype html> 
+	<!--<html> does the same as the above but for 
+	versions of HTML < 4 (not currently required)-->
+<html> 
+	<!--The <head> branch specifies information that is 
+	first read by the browser to correctly display the page.
+	This is where JavaScript source files and CSS files
+	are conventionally specified. It also contains other branches
+	such as tags/titles/authors/etc used by search engines
+	(not currently required)-->
+<head>
+
+	<title>Sprout</title>
+  <link rel="stylesheet" type="text/css" href="coolStyle.css"/>
+
+</head>
+	<!--This is the part where the data goes that is displayed
+	to the user.-->
+<body>
+	<h1>Amazing Presentations Ltd.</h1>
+	<div class="wow">
+		<h2>Amazing discovery.</h2>
+		<p>Something that changes the world.</p>
+		<a href="otherPageLocation.html">Lookie here.</a>
+	</div>
+	<p id = "footer">&copy; Mystwood Publishers Limited</p>
+</body>
+</html>
+
+\end{verbatim}
+
+\subsection{CSS}
+CSS or Cascading Style Sheets are commonly used in web applications to standardise formatting and styles. It is also used in reveal.js to set-up a presentation template.
+\begin{verbatim}
+body {
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+
+p {
+	font-size: 2rem;
+}
+
+.wow {
+	padding: 250px 0;
+	margin: 30px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  background-image: url("cool.jpg");
+  background-size: cover;
+  color: #ffffff
+}
+
+.hero a {
+	color: #00FFAA;
+	font-size: 24px;
+	text-decoration: none;
+  font-size: 1.25em;
+}
+
+#footer{
+  font-size:0.75rem;
+}
+\end{verbatim}
+
+\subsection{JavaScript}
+
+\subsection{Markdown}
+Markdown is very useful for writing content for web-pages books and other types of documents. The language is similar to \LaTeX in the sense that it uses plain text to write the source for a nicely formatted document, but it has the advantage of having very human-readable source code. The best way to write markdown is to use a specialised editor such as Atom, but in this tutorial we will use Brackets with a plugin for MD live generation. Markdown is so simple that an actual tutorial is not required for the basics and the cheat-sheet below should prove sufficient (for a step-by-step 10 minute tutorial check \url{http://commonmark.org/help/tutorial/} ):
+\begin{figure}[!HT]
+\centering
+\includegraphics[scale=0.6]{MD-Tutorial.png}
+\end{figure}
+
+\section{Tutorial}
+
+\end{document}
