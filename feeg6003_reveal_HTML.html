@@ -60,7 +60,7 @@
 					<h1>Reveal.js</h1>
 					<h3>The HTML Presentation Framework</h3>
 					<p>
-						<small>A workshop by Craig and Kostas.</small>
+						<small>A workshop by <br/> Craig Rafter and Konstantinos Drakopoulos</small>
 					</p>
 				</section>
 
@@ -71,13 +71,38 @@
 					</p>
 				</section>
                 
-                <section data-markdown>
-                    ## Workshop outline
-                    
-                    1. Reveal.js capabilities
-                    2. Making a reveal.js presentation
-                    3. Making your own presentation
+                <section>
+                    <h2>Workshop outline</h2>
+                    <ol>
+                        <li>Reveal.js capabilities</li>
+                        <li>Making a reveal.js presentation</li>
+                        <li>Making your own presentation</li>
+                    </ol>
                 </section>
+                
+                <section>
+                    <section>
+                        <h2>Why Reveal.js?</h2>
+                        <ul>
+                            <li>Define files as text.</li>
+                            <li>Version control your presention.</li>
+                            <li>Beautiful consistent web formatting</li>
+                            <li>Markdown and LaTeX out of the box</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Alternatives</h2>
+                        <ul>
+                            <li>PowerPoint</li>
+                            <li>LaTeX &amp; Beamer</li>
+                            <li>Slides.js</li>
+                            <li>Deck.js</li>
+                            <li>Prezi</li>
+                            <li>Impress.js</li>
+                        </ul>
+                    </section>
+                </section>
+                
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
@@ -152,9 +177,8 @@
                         ## Markdown Slide 2
                         Code for last 3 slides:
                         
-                        ```
-                        <section data-markdown 
-                          data-separator="^\n---\n$" 
+                        ```html
+                        <section data-markdown data-separator="^\n---\n$" 
                           data-separator-vertical="^\n--\n$">
                             ## Demo 2
                             Slide 1.1
@@ -192,7 +216,6 @@
                         <h2>Terrific $\LaTeX$</h2>
                         <h5>The Cauchy-Schwartz Inequality</h5>
                         $\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$
-                        
                     </section>
                 
                     <section>
@@ -232,7 +255,9 @@
                 <section>
                     <h2>Powerful Plotting</h2>
                     <p>Embed plotly.js or chart.js plots right into your slides!</p>
-                    <div id="myDiv" style="margin: 0 auto; width: 480px; height: 400px;" centered><!-- Plotly chart will be drawn inside this DIV --></div>
+                    <div id="MtBrunoDiv" style="margin: 0 auto; width: 480px; height: 400px;" centered>
+                        <!-- Plotly chart will be drawn inside this DIV -->
+                    </div>
                     <script src="plotfile.js"></script>
                 </section>
                 
@@ -356,7 +381,7 @@
 
 				<section>
 					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
+					<pre><code class="python" data-trim contenteditable>
 import numpy as np
 from matplotlib import pyplot
 
@@ -370,7 +395,15 @@ pyplot.ylabel('$x^2$')
 					</code></pre>
 					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
-
+                
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/15/5">like this</a>.
+					</p>
+				</section>
+                
                 <section>
                     <h2>Two columns, no problems...</h2>
                     <div class='left' style='float:left;width: left.width;'>
@@ -413,14 +446,6 @@ pyplot.ylabel('$x^2$')
 				</section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/13/5">like this</a>.
-					</p>
-				</section>
-
-				<section>
 					<h2>Speaker View</h2>
 					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
 					<p>Press the <em>S</em> key to try it out.</p>
@@ -430,11 +455,13 @@ pyplot.ylabel('$x^2$')
 					</aside>
 				</section>
 
-				<!--<section>
+				<!--
+                <section>
 					<h2>Export to PDF</h2>
 					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
 					<iframe src="https://www.slideshare.net/slideshow/embed_code/key/wJKsHYIEG2CqUj" width="500" height="410" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>-->
+				</section>
+                -->
 
 				<section>
                     <section>
@@ -448,8 +475,8 @@ pyplot.ylabel('$x^2$')
                         <p>The following script is placed at the end of the file:</p>
 
                         <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'slidechanged', function(event) {
-    if (event.indexh == 23 &amp;&amp; event.indexv == 1) {
+Reveal.addEventListener('slidechanged', function(event) {
+    if (event.indexh == 24 &amp;&amp; event.indexv == 1) {
         document.getElementById("unilogo").style = "visibility: hidden;";
     }
     else {
@@ -522,7 +549,7 @@ Reveal.addEventListener( 'slidechanged', function(event) {
 			});
             
             Reveal.addEventListener('slidechanged', function( event ) {
-                if (event.indexh == 23 && event.indexv == 1) {
+                if (event.indexh == 24 && event.indexv == 1) {
                     document.getElementById("unilogo").style = "visibility: hidden;";
                 }
                 else {
