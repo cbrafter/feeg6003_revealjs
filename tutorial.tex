@@ -101,5 +101,14 @@ Markdown is very useful for writing content for web-pages books and other types 
 \end{figure}
 
 \section{Tutorial}
-
+The tutorial exercise is to create a presentation by yourself from the bottom-up.
+\footnote{The above structure does not have to be necessarily respected, but it is recommended for cross-compatibility among browsers and connection speed (this unlikely to be a problem), since HTML is normally loaded progressively, it is necessary to have all the elements required for the next processing steps)}
+\begin{itemize}
+\item Start with the basic HTML structure, i.e. the \texttt{<html>} tags with \texttt{<head>}, \texttt{<body>}, etc.
+\item Add the reveal.js stylesheet and your own in the <head> branch.
+\item Add the \textit{reveal} \texttt{<div>} and inside it the \textit{slides} \texttt{<div>}
+\item Add about five sections inside the slides \texttt{<div>}
+\item Create \underline{two} JavaScript sections to call \textit{reveal.js} and \textit{head.min.js} (this is needed so that it works in all browsers),found in \texttt{./reveal.js/js/} and \texttt{./reveal.js/lib/js/}, respectively.
+\item After the slides section a new script branch is added to initialise the presentation.
+\end{itemize}
 \end{document}
