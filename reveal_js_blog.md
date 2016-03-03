@@ -23,7 +23,23 @@ A [VirtualBox](https://www.virtualbox.org/) virtual machine is available [here](
 
 #### Files
 
-Summary of files contained within...
+Summary of files contained within:
+
+- README.md: github README file to display markdown on page
+- feeg6003_lab.html: workshop lab material
+- feeg6003_reveal_HTML.html: HTML version of the presentation
+- feeg6003_reveal_MD.html: Markdown version of the presentation
+- feeg6003_template_adv.html: A template with full reveal options
+- feeg6003_template_basic.html: A template with cre reveal options
+- feeg6003_tutorial.html: workshop presentation material
+- img/: folder for images
+- plotfile.js: File containing the JavaScript for the embedded plot
+- reveal.js/: Folder containg the reveal.js files
+- reveal_js_blog.md: Markdown for the blog post
+- summary.md: Event page summary markdown
+- tutorial.tex: Guide for the workshop lab
+- tutorial_material/: Material for the lab
+- uos-reveal.min.css: CSS file to include the university logo in the corner of the presentation
 
 ## Using a Reveal.js Presentations
 
