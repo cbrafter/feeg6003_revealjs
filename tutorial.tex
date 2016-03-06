@@ -1,11 +1,10 @@
-\documentclass[11pt,a4paper,final]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\documentclass[a4paper]{article}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{listings}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \begin{document}
 \title{Reveal.js Tutorial}
@@ -22,77 +21,85 @@ We decided that the quickest way to approach this is to provide commented sample
 
 \subsection{HTML}
 HTML (\emph{HyperText Markup Language} is used by browsers to communicate with each other and display data in an attractive fashion. It has a tree-like structure similar to that of XML. Each branch defines a section of a web page is started by some text in brackets \texttt{<branch>} and ends with a \textbf{backward} slash and the text \verb|<\branch>|. Some objects are added in self-stopping branches by using a \textbf{forward} slash before closing the bracket \texttt{<branch/>}
+\begin{table}
 
-\begin{verbatim}
-	<!--Let the browser know this is an HTML doc-->
-<!doctype html> 
-	<!--<html> does the same as the above but for 
-	versions of HTML < 4 (not currently required)-->
-<html> 
-	<!--The <head> branch specifies information that is 
-	first read by the browser to correctly display the page.
-	This is where JavaScript source files and CSS files
-	are conventionally specified. It also contains other branches
-	such as tags/titles/authors/etc used by search engines
-	(not currently required)-->
+\noindent\begin{tabular}{l l}
+
+\begin{lstlisting}[language=HTML]
+<!doctype html>
+<html>
+\end{lstlisting}
+  & \parbox{0.4\textwidth}{Both do the same thing. Only the first is necessary in HTML v$\geqslant 4$}\\[2ex]
+\begin{lstlisting}[language=HTML]
 <head>
-
-	<title>Sprout</title>
-  <link rel="stylesheet" type="text/css" href="coolStyle.css"/>
-
+	<title>Amazed</title>|
+	<link rel="stylesheet" type="text/css"
+		 href="coolStyle.css"/>
 </head>
-	<!--This is the part where the data goes that is displayed
-	to the user.-->
+\end{lstlisting}
+ &\parbox{0.4\textwidth}{The branch specifies information that is first read by the browser to correctly display the page. This is where JavaScript source files and CSS files are conventionally specified. It also contains other branches such as tags/titles/authors/etc used by search engines}\\
+\begin{lstlisting}[language=HTML]
 <body>
-	<h1>Amazing Presentations Ltd.</h1>
-	<div class="wow">
-		<h2>Amazing discovery.</h2>
-		<p>Something that changes the world.</p>
-		<a href="otherPageLocation.html">Lookie here.</a>
-	</div>
-	<p id = "footer">&copy; Mystwood Publishers Limited</p>
-</body>
-</html>
+\end{lstlisting}
+ &\parbox[t]{0.4\textwidth}{This is the part where the data goes that is displayed	to the user.}\\[2ex]
+\quad\verb|	<h1>Amazing Presentations Ltd.</h1>|& Display text using heading 1\\[2ex]
+\quad\verb|	<div class="wow">|& \\[2ex]
+\qquad\verb|		<h2>Amazing discovery.</h2>|&\\[2ex]
+\qquad\verb|		<p>Something that changes the world.</p>|\ref{p}&\\[2ex]
+\qquad\verb|		<a href="otherPageLoc.html">Lookie here.</a>|&\\[2ex]
+\quad\verb|	</div>|&\\[2ex]
+\quad\verb|	<p id = "footer">&copy;NGCM Ltd.</p>|&\\[2ex]
+\verb|</body>|&\\[2ex]
 
-\end{verbatim}
+\end{tabular}
+\end{table}
 
 \subsection{CSS}
 CSS or Cascading Style Sheets are commonly used in web applications to standardise formatting and styles. It is also used in reveal.js to set-up a presentation template.
-\begin{verbatim}
+
+
+\begin{tabular}{l l}
+
+\begin{lstlisting}[language=HTML, label=body]
 body {
 	height: 100%;
 	margin: 0;
 	text-align: center;
 	width: 100%;
 }
-
+\end{lstlisting} & Specifies the general layout of the page.\\
+\begin{lstlisting}[language=HTML, label=p]
 p {
 	font-size: 2rem;
 }
-
+\end{lstlisting} & Set the font size of text inside \verb|<p></p>|\\
+\begin{lstlisting}[language=HTML, label=wow]
 .wow {
-	padding: 250px 0;
-	margin: 30px;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   background-image: url("cool.jpg");
   background-size: cover;
   color: #ffffff
 }
-
-.hero a {
+\end{lstlisting} & \parbox{0.4\textwidth}{Specify properties of a page division, i.e. a \texttt{<div>} part of a page that should have special properties (e.g. a background image)}\\
+\begin{lstlisting}[language=HTML, label=wowA]
+.wow a {
 	color: #00FFAA;
-	font-size: 24px;
 	text-decoration: none;
-  font-size: 1.25em;
+	font-size: 1.25em;
 }
-
+\end{lstlisting} & \parbox{0.4\textwidth}{Inside a division it might be necessary to want to change the way a link is formatted (the \texttt{<a>} inside a \texttt{<div>}.}\\
+\begin{lstlisting}[language=HTML, label=footer]
 #footer{
   font-size:0.75rem;
 }
-\end{verbatim}
+\end{lstlisting} & \parbox{0.4\textwidth}{If a specific paragraph's has to be formatted differently (e.g. change only the colour) you can give it an ID and set it up here.}\\
+
+\end{tabular}
 
 \subsection{JavaScript}
+HTML contains static content and JavaScript is the way by which a web-page becomes dynamic. This is a scripting language that is interpreted by your browser and it is able to do what most programming languages do: mathematical operations, run loops, functions and create objects.
 
+\small{JavaScript is completely different from Java}
 \subsection{Markdown}
 Markdown is very useful for writing content for web-pages books and other types of documents. The language is similar to \LaTeX in the sense that it uses plain text to write the source for a nicely formatted document, but it has the advantage of having very human-readable source code. The best way to write markdown is to use a specialised editor such as Atom, but in this tutorial we will use Brackets with a plugin for MD live generation. Markdown is so simple that an actual tutorial is not required for the basics and the cheat-sheet below should prove sufficient (for a step-by-step 10 minute tutorial check \url{http://commonmark.org/help/tutorial/} ):
 \begin{figure}[!HT]
