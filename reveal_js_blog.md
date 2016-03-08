@@ -51,7 +51,7 @@ Open the presentation/HTML file in your preferred text editor. Open the presenta
 
 #### Using Brackets
 
-Open the presentation/HTML file you wish to edit in Brackets. Click the lightning bolt icon in the upper right corner, this should open a browser window and the lighning bolt should turn yellow from grey. As you save your presentation, the changes will be reflected in the browser dynmically.
+Open the presentation/HTML file you wish to edit in Brackets. Click the lightning bolt icon in the upper right corner, this should open a browser window and the lighning bolt should turn from grey to yellow. As you save your presentation, the changes will be reflected in the browser dynmically.
 
 ## Tutorial
 
