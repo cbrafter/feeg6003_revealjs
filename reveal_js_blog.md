@@ -59,10 +59,6 @@ If you wish to make the presentation full screen, then press the **F** key, or l
 
 ## Tutorial
 
-Coming soon...
-
-## More Advanced Reveal.js
-
-Coming soon...
+In the tutorial we will do some live coding and build up a basic template. Those attending are then advised to complete the slide addition part individually. Finally a few exercises are given for those that would like a chalenge. The tutorial PDF file can be found on our repo [website](https://github.com/cbrafter/feeg6003_revealjs/blob/master/tutorial.pdf)
 
 ### Thank you!
