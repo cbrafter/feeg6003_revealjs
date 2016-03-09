@@ -53,6 +53,10 @@ Open the presentation/HTML file in your preferred text editor. Open the presenta
 
 Open the presentation/HTML file you wish to edit in Brackets. Click the lightning bolt icon in the upper right corner, this should open a browser window and the lighning bolt should turn from grey to yellow. As you save your presentation, the changes will be reflected in the browser dynmically.
 
+#### Controlling the presentation
+
+If you wish to make the presentation full screen, then press the **F** key, or leave the window reduced if you want to just test the presentation. With the browser in focus, the presentation can be controlled using the arrow keys or spacebar.
+
 ## Tutorial
 
 Coming soon...
