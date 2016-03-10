@@ -43,7 +43,7 @@ Open the presentation/HTML file in your preferred text editor. Open the presenta
 
 #### Using Brackets
 
-Open the presentation/HTML file you wish to edit in Brackets. Click the lightning bolt icon in the upper right corner, this should open a browser window and the lighning bolt should turn from grey to yellow. As you save your presentation, the changes will be reflected in the browser dynmically.
+Open the presentation/HTML file you wish to edit in Brackets. Click the lightning bolt icon in the upper right corner, this should open a browser window and the lighning bolt should turn from grey to yellow. As you save your presentation, the changes will be reflected in the browser dynamically.
 
 #### Controlling the presentation
 
@@ -51,6 +51,6 @@ If you wish to make the presentation full screen, then press the **F** key, or l
 
 ## Tutorial
 
-In the tutorial we will do some live coding and build up a basic template. Those attending are then advised to complete the slide addition part individually. Finally a few exercises are given for those that would like a chalenge. The tutorial PDF file can be found [here](./tutorial.pdf). Before you start working, make sure you've downloaded the file from this repository.
+In the tutorial we will do some live coding and build up a basic template. Those attending are then advised to complete the slide addition part individually. Finally a few exercises are given for those that would like a chalenge. The tutorial PDF file can be found [here](tutorial.pdf). Before you start working, make sure you've downloaded the file from this repository.
 
 ### Thank you!
