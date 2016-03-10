@@ -33,7 +33,7 @@ Summary of files contained within:
 - tutorial_material/: Material for the lab
 - uos-logo.css: CSS file to include the university logo in the corner of the presentation
 
-## Using a Reveal.js Presentations
+## Using Reveal.js Presentations
 
 You can view a Revel.js presentation in any JavaScript enabled browser.
 
